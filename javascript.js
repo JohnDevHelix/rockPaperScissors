@@ -1,3 +1,12 @@
+const buttons = document.querySelectorAll("button");
+const main = document.querySelector(".main");
+const newDiv = document.createElement("div");
+newDiv.classList.add("result");
+main.appendChild(newDiv);
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => console.log(button.id)) });
+
 function getComputerChoice() {
     const choice = ["rock", "paper", "scissors"];
     let computer = Math.floor(Math.random() * 3);
@@ -10,10 +19,6 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    function getHumanChoice() {
-        let humanPrompt = prompt("Enter your choice:");
-        return humanPrompt.toLowerCase();
-    }
 
     function playRound(humanChoice, computerChoice) {
     if (humanChoice == "rock" || humanChoice == "paper" || humanChoice == "scissors") {
@@ -54,10 +59,6 @@ function playGame() {
         }
     } else {}
 }
-
-for (i = 1; i <= 5; i++) {
- playGame();
-} 
 
 
 
