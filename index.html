@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Project- Rock Paper Scissors</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Odin Project- Rock Paper Scissors</title>
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="main">
-    <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-    </div>
+   <div class="buttons">
+       <button class="rps-buttons" id="rock"><img src="rock.svg" class="rps-images animated"></button>
+        
+       <button class="rps-buttons" id="paper"><img src="paper.svg" class="rps-images animated"></button>
+        
+       <button class="rps-buttons" id="scissors"><img src="scissors.svg" class="rps-images animated"></button>
+        
+   </div>
+  
+   <div class="score">
+       <h3 id="player">Your Score:</h3>
+       <h3 id="computer">Computer Score:</h3>
+   </div>
 
 </div>
 
-    <script src="javascript.js"></script>
+   <script src="javascript.js"></script>
 </body>
 </html>
