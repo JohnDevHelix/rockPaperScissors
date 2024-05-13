@@ -4,8 +4,9 @@ const newDiv = document.createElement("div");
 newDiv.classList.add("result");
 main.appendChild(newDiv);
 
-buttons.forEach((button) => {
-    button.addEventListener("click", () => console.log(button.id)) });
+
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     const choice = ["rock", "paper", "scissors"];
@@ -13,18 +14,11 @@ function getComputerChoice() {
     return choice[computer];
 }
 
-function playGame() {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    let humanScore = 0;
-    let computerScore = 0;
+function playRound(humanChoice, computerChoice) {
 
-
-    function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "rock" || humanChoice == "paper" || humanChoice == "scissors") {
-        if (humanChoice == "rock" && computerChoice === "scissors") {
+    if (humanChoice == "rock" && computerChoice === "scissors") {
             console.log("You win! Rock beats Scissors");
-            humanScore++;
+            humanScore++
         } else if (humanChoice == "paper" && computerChoice === "rock") {
             console.log("You win! Paper beats Rock");
             humanScore++;
@@ -41,24 +35,24 @@ function playGame() {
             console.log("You lose! Rock beats Scissors");
             computerScore++;
         } else {
-            console.log("Draw!");
+            console.log("DRAW!");
         }
-    } else {
-        console.log("Invalid Choice! Try Again");
-    }
-    }
-    playRound(humanSelection, computerSelection);
-    
-    if (i === 5) {
-        if (humanScore > computerScore) {
-            console.log("Human Wins");
-        } else if (humanScore < computerScore) {
-            console.log("Computer Wins");
-        } else {
-            console.log("Draw!");
-        }
-    } else {}
 }
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const humanSelection = button.id;
+        const computerSelection = getComputerChoice();
+        console.log(humanSelection, computerSelection);
+        playRound(humanSelection, computerSelection);
+            } ) } );
+        
+
+
+
+
+ 
+
 
 
 
