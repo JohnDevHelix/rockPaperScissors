@@ -1,52 +1,116 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  background-color: grey;
+  }
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  }
+
+.center-div {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  }
+
+/* RPS Buttons here */
+
 .rps-images {
-    height: 100px;
-    widht: 100px;
-    border: 5px solid black;
-    border-radius: 20px;
-    box-shadow: 0 9px #999;
-    padding: 20px;
-    }
-  
-  .rps-buttons {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    
-    }
-  
-  .animated:hover {background-color: grey;}
-  
-  .animated:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-    }
-  
-  .main {
+  height: 80px;
+  width: ;: 80px;
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 0 9px #999;
+  padding: 20px;
+  }
+
+.rps-buttons {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: grey;
+  }
+
+.animated:hover {background-color: #76ABAE;}
+
+.animated:active {
+  background-color: #EEEEEE;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
+.header, .game-round {
+  text-align: center;
+  }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  }
+
+/* Game Round here */
+
+.score {
+  display: flex;
+  justify-content: center;
+  }
+
+h3 {
+  padding: 20px;
+  }
+
+span {
+  padding-left: 5px;
+  }
+
+.score {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  }
+
+.player-score {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.comp-score {
     display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    flex-direction: column;
-    }
-  
-  .buttons {
-    display: flex;
-     border: 2px solid black;
-    justify-content: space-between;
-    
-    }
-  
-  
-  .score {
-    display: flex;
-    border: 2px solid black;
-    justify-content: center;
-    }
-  
-  h3 {
-    padding: 20px;
-    }
-  
-  span {
-    padding-left: 5px;
+  justify-content: center;
+   flex-direction: column;
+  align-items: center;
+  }
+
+.choice-img {
+  height: 100px;
+  width: 100px;
+  border: 5px groove black;
+  border-radius: 20px;
+  padding: 10px;
+  }
+
+.try-again {
+  align-self: center;
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 5px;
+  background: white;
+  padding: 7px;
+  font-weight: bolder;
+  }
+
+.img-choice {
+  width: 100px;
+  height: 100px;
+  }
