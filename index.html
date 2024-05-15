@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Odin Project- Rock Paper Scissors</title>
    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="main">
-   <div class="buttons">
-       <button class="rps-buttons" id="rock"><img src="rock.svg" class="rps-images animated"></button>
-        
-       <button class="rps-buttons" id="paper"><img src="paper.svg" class="rps-images animated"></button>
-        
-       <button class="rps-buttons" id="scissors"><img src="scissors.svg" class="rps-images animated"></button>
-        
-   </div>
-  
-   <div class="score">
-       <h3 id="player">Your Score:</h3>
-       <h3 id="computer">Computer Score:</h3>
-   </div>
+   <div class="main">
+      <div class="center-div">
+         <div class="header">
+            <h1>Pick your weapon!</h1>
+         </div>
 
-</div>
+         <!-- RPS Buttons here -->
 
-   <script src="javascript.js"></script>
+         <div class="buttons">
+            <button class="rps-buttons" id="rock"><img src="rock.svg" class="rps-images animated"
+                  alt="hand rock sign"></button>
+
+            <button class="rps-buttons" id="paper"><img src="paper.svg" class="rps-images animated"
+                  alt="hand paper sign"></button>
+
+            <button class="rps-buttons" id="scissors"><img src="scissors.svg" class="rps-images animated"
+                  alt="hand scissors sign"></button>
+
+         </div>
+
+         <!-- Game Round here -->
+
+         <div class="round-div">
+            <div class="game-round">
+               <h2>Begin Round</h2>
+            </div>
+
+            <div class="score">
+               <div class="player-score">
+                  <div class="player-choice human-choice">
+                     <h3 id="human-select">Player</h3>
+                  </div>
+                  <div class="player-choice choice-img" id="human-img"></div>
+                  <div class="player-choice">
+                     <h3 id="player">Your Score:</h3>
+                  </div>
+               </div>
+
+               <div class="comp-score">
+                  <div class="comp-choice opp-choice">
+                     <h3 id="comp-select">Computer</h3>
+                  </div>
+                  <div class="comp-choice choice-img" id="comp-img"></div>
+                  <div class="comp-choice">
+                     <h3 id="computer">Computer Score:</h3>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+
+      <script src="javascript.js"></script>
 </body>
+
 </html>
